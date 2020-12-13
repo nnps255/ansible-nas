@@ -6,13 +6,13 @@
 ##       \/     \/     \/        \/          \/               \/     \/     \/
 ##     a n s i b l e - n a s      https://github.com/davestephens/ansible-nas
 
+# Add your all.yml config overrides to this file. See group_vars/all.yml for all possible settings.
 
-[all]
-## Example when running from a remote workstation
-# sosurvey-nas ansible_host=192.168.1.30
+# Example options
+ansible_nas_hostname: ansible-nas
+ansible_nas_timezone: Etc/UTC
 
-## Example when running directly on your Ansible-NAS server
-# sosurvey-nas ansible_connection=local ansible_host=localhost
+## Enable some applications
+heimdall_enabled: true
+portainer_enabled: true
 
-[nas]
-sosurvey-nas
